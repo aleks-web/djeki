@@ -1,17 +1,15 @@
 <section class="footer">
     <div class="footer__container container">
         <div class="footer__wrap">
-
             <div class="footer__main">
                 <div class="footer__logo">
-                    <a href="#"><img class="footer__logo-svg" src="../assets/img/logo-text.png" alt="Лого"></a>
+                    <a href="#"><img class="footer__logo-svg" src="../assets/img/logo-text.png" alt="Лого" /></a>
                 </div>
 
                 <div class="footer__working">
                     <span class="footer__working-time">Режим работы — круглосуточно</span>
                     <span class="footer__working-time-order">Прием заказов: c 07:00 до 21:00</span>
                 </div>
-
             </div>
 
             <div class="footer__other">
@@ -30,28 +28,25 @@
                 </div>
 
                 <div class="footer__info-mobile">
-                    <span class="footer__info-mobile-text">Заказывайте по телефону<br>или в приложении</span>
+                    <span class="footer__info-mobile-text">Заказывайте по телефону<br />или в приложении</span>
                     <span class="footer__info-mobile-links">
-                        <a href="#"><img src="/assets/img/appstore.svg" alt="Апсторе"></a>
-                        <a href="#"><img src="/assets/img/googleplay.svg" alt="googleplay"></a>
+                        <a href="#"><img src="/assets/img/appstore.svg" alt="Апсторе" /></a>
+                        <a href="#"><img src="/assets/img/googleplay.svg" alt="googleplay" /></a>
                     </span>
 
                     <div class="footer__social">
                         <a href="#" class="footer__social-link">
-                            <img src="../assets/img/social/vk.svg" alt="">
+                            <img src="../assets/img/social/vk.svg" alt="" />
                         </a>
                         <a href="#" class="footer__social-link">
-                            <img src="../assets/img/social/youtube.svg" alt="">
+                            <img src="../assets/img/social/youtube.svg" alt="" />
                         </a>
                         <a href="#" class="footer__social-link">
-                            <img src="../assets/img/social/mail.svg" alt="">
+                            <img src="../assets/img/social/mail.svg" alt="" />
                         </a>
                     </div>
                 </div>
-                
-                
             </div>
-
         </div>
 
         <div class="footer__copyright">
@@ -63,3 +58,109 @@
         </div>
     </div>
 </section>
+
+@@include('svg.html')
+
+<div class="modal-cart">
+    <div class="modal-cart__container">
+        <div class="d-flex align-items-baseline gap-3 mb-4">
+            <div class="modal-cart__title">Корзина</div>
+            <div class="modal-cart__clear">Очистить</div>
+        </div>
+
+        <div class="modal-cart__product-list">
+            <div class="cart-product">
+                <div class="cart-product__left">
+                    <div class="cart-product__img" style="background-image: url('/assets/img/products/1.png')"></div>
+                    <div class="cart-product__info">
+                        <div class="cart-product__title">Ветчина с грибами</div>
+                        <div class="cart-product__price">700 Р</div>
+                    </div>
+                </div>
+                <div class="cart-product__right">
+                    <svg class="cart-product__close">
+                        <use xlink:href="#close" />
+                    </svg>
+                    <div class="cart-product__count">
+                        <svg>
+                            <use xlink:href="#pluse" />
+                        </svg>
+                        <div>1</div>
+                        <svg>
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product">
+                <div class="cart-product__left">
+                    <div class="cart-product__img" style="background-image: url('/assets/img/products/1.png')"></div>
+                    <div class="cart-product__info">
+                        <div class="cart-product__title">Ветчина с грибами</div>
+                        <div class="cart-product__price">700 Р</div>
+                    </div>
+                </div>
+                <div class="cart-product__right">
+                    <svg class="cart-product__close">
+                        <use xlink:href="#close" />
+                    </svg>
+                    <div class="cart-product__count">
+                        <svg>
+                            <use xlink:href="#pluse" />
+                        </svg>
+                        <div>1</div>
+                        <svg>
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product">
+                <div class="cart-product__left">
+                    <div class="cart-product__img" style="background-image: url('/assets/img/products/1.png')"></div>
+                    <div class="cart-product__info">
+                        <div class="cart-product__title">Ветчина с грибами</div>
+                        <div class="cart-product__price">700 Р</div>
+                    </div>
+                </div>
+                <div class="cart-product__right">
+                    <svg class="cart-product__close">
+                        <use xlink:href="#close" />
+                    </svg>
+                    <div class="cart-product__count">
+                        <svg>
+                            <use xlink:href="#pluse" />
+                        </svg>
+                        <div>1</div>
+                        <svg>
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-cart__more">
+            <span class="modal-cart__more-title">Добавить к заказу</span>
+            <span>-></span>
+        </div>
+        <div class="modal-cart__more">
+            <span class="modal-cart__more-title">Добавить к заказу</span>
+            <span>-></span>
+        </div>
+        <div class="modal-cart__more">
+            <span class="modal-cart__more-title">Добавить к заказу</span>
+            <span>-></span>
+        </div>
+        <div class="modal-cart__more">
+            <span class="modal-cart__more-title">Добавить к заказу</span>
+            <span>-></span>
+        </div>
+        <div class="modal-cart__more">
+            <span class="modal-cart__more-title">Добавить к заказу</span>
+            <span>-></span>
+        </div>
+
+        <div class="modal-cart__bottom"></div>
+    </div>
+</div>
