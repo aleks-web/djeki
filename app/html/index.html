@@ -6,17 +6,21 @@
 
     <!-- Start body -->
     <body>
-        <!-- Start include header -->
-        @@include('blocks/header.html', { "title": "Тестовый layout" })
-        <!-- End include header -->
+        <div class="main-wrapper">
+            <!-- Start include header -->
+            @@include('blocks/header.html', { "title": "Тестовый layout" })
+            <!-- End include header -->
 
-        <div class="container">
-            Код
+            <div class="main-content">
+                <div class="main-content__container container">
+                    Код
+                </div>
+            </div>
+
+            <!-- Start include footer -->
+            @@include('blocks/footer.html')
+            <!-- End include footer -->
         </div>
-
-        <!-- Start include footer -->
-        @@include('blocks/footer.html')
-        <!-- End include footer -->
     </body>
     <!-- END body -->
 </html>

@@ -11,6 +11,12 @@ ol {
 
 a {
     text-decoration: unset;
+    transition: var(--speed) all;
+    color: var(--clr-2);
+
+    &:hover {
+        color: var(--clr-4)
+    }
 }
 
 input {

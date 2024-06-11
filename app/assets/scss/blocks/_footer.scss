@@ -1,15 +1,285 @@
 .footer {
-    &__bottom {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+    }
+
+
+
+    // Общая обёртка левого и правого контейнера
+    &__wrap {
+        display: flex;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    // Обертка левого контента (главная информация)
+    &__main {
+        min-width: 300px;
+        margin-right: 60px;
+
+        @include media-breakpoint-down(md) {
+            min-width: unset;
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        > * {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            &:last-child,
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__infobar {
+        a {
+            border-bottom: 1px solid transparent !important;
+
+            * {
+                color: #D5DAE3;
+                transition: var(--fast-animation) all;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    // Обертка правого контента (Блок ссылок)
+    &__other {
         display: flex;
         justify-content: space-between;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: fill-available;
+
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+
+        // Стили списков
+        ul {
+            padding: 0;
+            margin-right: 50px;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 0;
+
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 50px;
+                    height: 1px;
+                    background-color: #CED2DB;
+                    opacity: 0.2;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                }
+
+                &:last-child::after {
+                    content: unset;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            li {
+                padding: 0;
+                margin-bottom: 15px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1rem;
+                    margin-bottom: 8px;
+                }
+
+                &:before {
+                    content: unset;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                color: var(--clr-2);
+                border-bottom: 1px solid transparent;
+                transition: var(--fast-animation) all;
+
+                &:hover {
+                    border-bottom: 1px solid var(--main-color-footer-link-hover);
+                }
+            }
+        }
+
+    }
+}
+
+// Стили логотипа
+.footer__logo {
+    max-width: 190px;
+
+    @include media-breakpoint-down(sm) {
+        max-width: 140px;
+    }
+}
+
+/* 
+    ? Элемент телефона
+    desc: Расширяет и переопределяет стили БЭМ блока blocks/_phone.scss
+*/
+.footer__phone {
+    margin-bottom: 0px;
+
+    &:before {
+        width: 25px;
+        height: 25px;
     }
 
-    &__social {
-        display: flex;
-        align-items: center;
-    }
-
-    &__politic-link {
+    &-number {
         color: var(--clr-2);
+        font-size: 1.6rem;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+// Блок время работы
+.footer__working {
+    color: var(--main-color-footer-text);
+
+    // Все дочерние элементы первого уровня
+    > * {
+        display: block;
+        line-height: 140%;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+// Блок соц.сетей
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+
+    &-link {
+        margin-right: 20px;
+        opacity: 0.9;
+        transition: var(--fast-animation) all;
+
+        @include media-breakpoint-down(sm) {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.015);
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+
+// Блок ссылка политики конф
+.footer__politic {
+    &-link {
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Блок копирайта
+.footer__copyright {
+    margin-top: 10px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #CED2DB;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-text {
+        display: block;
+        color: var(--main-color-footer-text);
+        font-size: 1.1rem;
+        line-height: 140%;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 0.9rem;
+        }
+
+        &:first-child {
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
     }
 }
