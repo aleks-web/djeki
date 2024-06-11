@@ -1,0 +1,15 @@
+.footer {
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__politic-link {
+        color: var(--clr-2);
+    }
+}
