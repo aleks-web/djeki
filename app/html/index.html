@@ -13,7 +13,72 @@
 
             <div class="main-content">
                 <div class="main-content__container container">
-                    Код
+                    <aside class="sidebar">
+                        <ul class="sidebar__links">
+                            <li><a class="active" href="#sets">Сеты</a></li>
+                            <li><a href="#piza">Пицца</a></li>
+                            <li><a href="#rolls">Роллы</a></li>
+                            <li><a href="#streedfoot">Стритфуд</a></li>
+                        </ul>
+                    </aside>
+
+                    <main class="products">
+                        <div class="product-block" id="sets">
+                            <h2 class="product-block__title">Сеты</h2>
+
+                            <div class="product-block__products">
+                                @@include('blocks/product-card.html', {"image": "1.png"})
+                                @@include('blocks/product-card.html', {"image": "2.png"})
+                                @@include('blocks/product-card.html', {"image": "3.png"})
+                                @@include('blocks/product-card.html', {"image": "4.png"})
+                                @@include('blocks/product-card.html', {"image": "5.png"})
+                                @@include('blocks/product-card.html', {"image": "6.png"})
+                                @@include('blocks/product-card.html', {"image": "7.png"})
+                            </div>
+                        </div>
+
+                        <div class="product-block" id="piza">
+                            <h2 class="product-block__title">Пицца</h2>
+
+                            <div class="product-block__products">
+                                @@include('blocks/product-card.html', {"image": "1.png"})
+                                @@include('blocks/product-card.html', {"image": "2.png"})
+                                @@include('blocks/product-card.html', {"image": "3.png"})
+                                @@include('blocks/product-card.html', {"image": "4.png"})
+                                @@include('blocks/product-card.html', {"image": "5.png"})
+                                @@include('blocks/product-card.html', {"image": "6.png"})
+                                @@include('blocks/product-card.html', {"image": "7.png"})
+                            </div>
+                        </div>
+
+                        <div class="product-block" id="rolls">
+                            <h2 class="product-block__title">Роллы</h2>
+
+                            <div class="product-block__products">
+                                @@include('blocks/product-card.html', {"image": "1.png"})
+                                @@include('blocks/product-card.html', {"image": "2.png"})
+                                @@include('blocks/product-card.html', {"image": "3.png"})
+                                @@include('blocks/product-card.html', {"image": "4.png"})
+                                @@include('blocks/product-card.html', {"image": "5.png"})
+                                @@include('blocks/product-card.html', {"image": "6.png"})
+                                @@include('blocks/product-card.html', {"image": "7.png"})
+                            </div>
+                        </div>
+
+                        <div class="product-block" id="streedfoot">
+                            <h2 class="product-block__title">Стритфуд</h2>
+
+                            <div class="product-block__products">
+                                @@include('blocks/product-card.html', {"image": "1.png"})
+                                @@include('blocks/product-card.html', {"image": "2.png"})
+                                @@include('blocks/product-card.html', {"image": "3.png"})
+                                @@include('blocks/product-card.html', {"image": "4.png"})
+                                @@include('blocks/product-card.html', {"image": "5.png"})
+                                @@include('blocks/product-card.html', {"image": "6.png"})
+                                @@include('blocks/product-card.html', {"image": "7.png"})
+                            </div>
+                        </div>
+                    </main>
                 </div>
             </div>
 

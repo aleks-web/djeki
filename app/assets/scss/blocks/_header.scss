@@ -1,7 +1,8 @@
 .header {
     display: flex;
     align-items: center;
-    height: 75px;
+    min-height: 75px;
+    margin-bottom: 30px;
 
     &__container {
         display: flex;
@@ -16,6 +17,57 @@
         gap: 20px;
     }
 
+    &__right {
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
+    }
+
+    &__burger {
+        gap: 6px;
+        flex-direction: column;
+        display: none;
+        z-index: 900;
+        cursor: pointer;
+
+        &:hover {
+            span {
+                background-color: var(--clr-4);
+            }
+        }
+
+        span {
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 3px;
+            border-radius: 50px;
+            background-color: var(--clr-2);
+            transition: var(--speed) all;
+        }
+
+        @include media-breakpoint-down(xl) {
+            display: flex;
+        }
+
+        &_active {
+            span {
+                background-color: var(--clr-4);
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:last-child {
+                    top: -9px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
     &__logo {
         display: flex;
         align-items: center;
@@ -26,6 +78,11 @@
         flex-direction: column;
         font-size: 1.1rem;
         margin-bottom: 4px;
+        min-width: max-content;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
 
         &-title {
             color: var(--clr-2);
@@ -58,6 +115,10 @@
     margin-left: 10px;
     padding-left: 20px;
 
+    @include media-breakpoint-down(xl) {
+        display: none;
+    }
+
     ul {
         display: flex;
         gap: 15px;
@@ -69,6 +130,37 @@
            &:hover {
             color: var(--clr-4);
            }
+        }
+    }
+}
+
+.header-mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--clr-1);
+    transition: var(--speed) all;
+    transform: translateX(-100%);
+    border-right: 2px solid var(--clr-4);
+    padding: 20px;
+    z-index: 900;
+
+    &_active {
+        transform: translateX(0);
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__menu {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
     }
 }

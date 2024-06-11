@@ -1,0 +1,23 @@
+.sidebar {
+    min-width: 260px;
+
+    &__links {
+        a {
+            color: white;
+            display: block;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 7px;
+            transition: var(--speed) all;
+
+            &:hover {
+                background-color: var(--clr-6);
+            }
+
+            &.active {
+                background-color: white;
+                color: var(--clr-7);
+            }
+        }
+    }
+}

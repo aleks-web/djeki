@@ -9,10 +9,31 @@ html {
 }
 
 body {
+    position: relative;
     font-family: 'Montserrat';
     font-weight: 400;
     background-color: var(--clr-1);
     color: white;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.2;
+        display: none;
+    }
+
+    &.header-menu-opened {
+        overflow: hidden;
+
+        &:before {
+            display: block;
+        }
+    }
 }
 
 .main-wrapper {
@@ -24,4 +45,9 @@ body {
 
 .main-content {
     flex-grow: 1;
+
+    &__container {
+        display: flex;
+        gap: 25px;
+    }
 }
