@@ -1,6 +1,14 @@
 .sidebar {
     min-width: 260px;
 
+    @include media-breakpoint-down(xl) {
+        min-width: 200px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+
     &__links {
         a {
             color: white;

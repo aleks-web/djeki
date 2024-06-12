@@ -62,6 +62,8 @@
 @@include('svg.html')
 
 <div class="modal-cart">
+    <svg class="modal-cart__close" id="close-cart"><use xlink:href="#close" /></svg>
+
     <div class="modal-cart__container">
         <div class="d-flex align-items-baseline gap-3 mb-4">
             <div class="modal-cart__title">Корзина</div>
@@ -141,26 +143,28 @@
         </div>
 
         <div class="modal-cart__more">
-            <span class="modal-cart__more-title">Добавить к заказу</span>
-            <span>-></span>
-        </div>
-        <div class="modal-cart__more">
-            <span class="modal-cart__more-title">Добавить к заказу</span>
-            <span>-></span>
-        </div>
-        <div class="modal-cart__more">
-            <span class="modal-cart__more-title">Добавить к заказу</span>
-            <span>-></span>
-        </div>
-        <div class="modal-cart__more">
-            <span class="modal-cart__more-title">Добавить к заказу</span>
-            <span>-></span>
-        </div>
-        <div class="modal-cart__more">
-            <span class="modal-cart__more-title">Добавить к заказу</span>
-            <span>-></span>
-        </div>
+            <div class="modal-cart__more-header">
+                <span class="modal-cart__more-title">Добавить к заказу</span>
+                <div class="modal-cart__more-arrows">
+                    <svg id="cart-slider-left"><use xlink:href="#circle-left-arrow" /></svg>
+                    <svg id="cart-slider-right"><use xlink:href="#circle-right-arrow" /></svg>
+                </div>
+            </div>
 
-        <div class="modal-cart__bottom"></div>
+            <div class="modal-cart__more-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">@@include('product-card.html', {"image": "1.png"})</div>
+                    <div class="swiper-slide">@@include('product-card.html', {"image": "2.png"})</div>
+                    <div class="swiper-slide">@@include('product-card.html', {"image": "3.png"})</div>
+                    <div class="swiper-slide">@@include('product-card.html', {"image": "4.png"})</div>
+                    <div class="swiper-slide">@@include('product-card.html', {"image": "5.png"})</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-cart__bottom">
+        <span class="modal-cart__price">2495 Р</span>
+        <button class="modal-cart__btn-pay">Оформить заказ</button>
     </div>
 </div>

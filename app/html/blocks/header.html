@@ -2,7 +2,7 @@
     <div class="container header__container">
         <div class="header__left">
             <div class="header__logo">
-                <img src="/assets/img/logo-text.png" alt="Логотип джекина доставка">
+                <img src="/assets/img/logo-text.png" alt="Логотип джекина доставка" />
             </div>
             <div class="header__work-time">
                 <span class="header__work-time-title">Сегодня работаем</span>
@@ -18,18 +18,27 @@
         </div>
         <div class="header__right">
             <a class="header__phone" href="#">8 (3822) 996-620</a>
-            <div class="header__minicart">Корзина</div>
-        </div>
-        <div class="header__burger" id="header-burger">
-            <span></span>
-            <span></span>
-            <span></span>
+
+            <div class="header__minicart" id="open-cart">
+                <div class="header__minicart-full">Корзина</div>
+                <div class="header__minicart-short">
+                    <svg>
+                        <use xlink:href="#cart"></use>
+                    </svg>
+                </div>
+                <div class="header__minicart-count">1</div>
+            </div>
+            <div class="header__burger" id="header-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
 
 <div class="header-mobile-menu" id="header-mobile-menu">
-    <img class="header-mobile-menu__logo" src="/assets/img/logo-text.png" alt="Логотип джекина доставка">
+    <img class="header-mobile-menu__logo" src="/assets/img/logo-text.png" alt="Логотип джекина доставка" />
     <div class="header-mobile-menu__menu">
         <ul>
             <li><a href="#">Главная</a></li>

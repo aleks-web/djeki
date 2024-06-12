@@ -8,11 +8,51 @@
     display: block;
     background-color: var(--clr-8);
     z-index: 900;
+    transition: var(--speed) all;
+    transform: translateX(130%);
+
+    @include media-breakpoint-down(md) {
+    }
+
+    &_active {
+        transform: translateX(0);
+    }
+
+    &__close {
+        fill: white;
+        position: absolute;
+        top: 10px;
+        right: calc(100% + 10px);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: var(--speed) all;
+
+        &:hover {
+            fill: var(--clr-4);
+            transform: rotate(180deg);
+        }
+    }
 
     &__container {
         padding: 35px;
         height: 100%;
         overflow-y: auto;
+        padding-bottom: 60px;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--clr-1);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--clr-2);
+            border-radius: 20px;
+            border: 3px solid var(--clr-2);
+        }
     }
 
     &__title {
@@ -50,14 +90,67 @@
     }
 
     &__more {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 30px;
+        margin-top: 40px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
 
         &-title {
             font-size: 1.5rem;
             font-weight: 500;
         }
+
+        &-arrows {
+            display: flex;
+            gap: 10px;
+
+            svg {
+                fill: white;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                transition: var(--speed) all;
+
+                &:hover {
+                    fill: var(--clr-4);
+                }
+            }
+        }
+
+        &-slider {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        padding: 10px 35px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--clr-9);
+        box-shadow: 0px 3px 20px 0px var(--clr-9);
+        z-index: 900;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    &__btn-pay {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+        padding: 6px 15px;
+        background-color: var(--clr-4);
+        border-radius: 5px;
     }
 }
