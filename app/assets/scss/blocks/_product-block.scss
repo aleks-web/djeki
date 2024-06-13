@@ -103,10 +103,21 @@
     height: 100px;
     box-sizing: content-box;
 
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        align-items: baseline;
+    }
+
     &__left {
         display: flex;
         gap: 20px;
         align-items: center;
+
+        @include media-breakpoint-down(sm) {
+            gap: 15px;
+        }
     }
 
     &__right {
@@ -126,29 +137,64 @@
         max-width: 150px;
         width: 100%;
         height: inherit;
-        background-size: 100%;
+        background-size: 100% 100%;
         background-position: center;
         border-radius: 10px;
         background-repeat: no-repeat no-repeat;
+
+        @include media-breakpoint-down(sm) {
+            min-width: 100px;
+            max-width: 100px;
+            height: 100px;
+        }
+
+        @include media-breakpoint-down(s) {
+            min-width: 70px;
+            max-width: 70px;
+            height: 70px;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @include media-breakpoint-down(s) {
+            gap: 5px;
+        }
+    }
+
+    &__title {
+        @include media-breakpoint-down(s) {
+            font-size: 0.8rem;
+        }
     }
 
     &__price {
         font-weight: 600;
+
+        @include media-breakpoint-down(s) {
+            font-size: 0.9rem;
+        }
     }
 
     &__count {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 10px;
         background-color: var(--clr-9);
         overflow: hidden;
         border-radius: 5px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100px;
+        }
+
+        @include media-breakpoint-down(s) {
+            width: 70px;
+        }
 
         svg {
             width: 40px;
@@ -156,6 +202,11 @@
             fill: white;
             cursor: pointer;
             transition: var(--speed) all;
+
+            @include media-breakpoint-down(sm) {
+                width: 30px;
+                height: 30px;
+            }
 
             &:hover {
                 fill: var(--clr-4);
@@ -170,6 +221,20 @@
         fill: var(--clr-9);
         cursor: pointer;
         transition: var(--speed) all;
+
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @include media-breakpoint-down(s) {
+            width: 30px;
+            height: 30px;
+            top: -14px;
+        }
 
         &:hover {
             fill: var(--clr-4);
