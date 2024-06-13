@@ -36,10 +36,6 @@
         z-index: 900;
         cursor: pointer;
 
-        @include media-breakpoint-down(sm) {
-            display: none !important;
-        }
-
         span {
             position: relative;
             display: block;

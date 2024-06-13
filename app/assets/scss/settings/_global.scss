@@ -15,7 +15,7 @@ body {
     background-color: var(--clr-1);
     color: white;
 
-    &:before {
+    > .bodybg {
         content: "";
         position: absolute;
         top: 0;
@@ -31,7 +31,7 @@ body {
     &.header-menu-opened {
         overflow: hidden;
 
-        &:before {
+        > .bodybg {
             display: block;
         }
     }

@@ -28,7 +28,7 @@
                 </div>
                 <div class="header__minicart-count">1</div>
             </div>
-            <div class="header__burger" id="header-burger">
+            <div class="header__burger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -63,10 +63,21 @@
 </div>
 
 <div class="fix-menu">
+    <div class="mini-menu">
+        <div class="mini-menu__container container">
+            <ul>
+                <li><a href="#">Сеты</a></li>
+                <li><a href="#">Сеты 1</a></li>
+                <li><a href="#">Сеты 2</a></li>
+                <li><a href="#">Сеты 3</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="fix-menu__container container">
         <ul class="fix-menu__menu">
             <li>
-                <a class="fix-menu__item" href="#">
+                <a class="fix-menu__item fix-menu__item-menu" href="#">
                     <div class="fix-menu__icon">
                         <svg>
                             <use xlink:href="#like"></use>
@@ -96,7 +107,7 @@
                 </a>
             </li>
             <li>
-                <a class="fix-menu__item" href="#">
+                <a class="fix-menu__item fix-menu__item-cart" href="#">
                     <div class="fix-menu__icon">
                         <div class="fix-menu__cart-count">1</div>
                         <svg>
@@ -109,6 +120,9 @@
         </ul>
     </div>
 </div>
+
+
+
 
 <div class="header-mobile-menu" id="header-mobile-menu">
     <img class="header-mobile-menu__logo" src="/assets/img/logo-text.png" alt="Логотип джекина доставка" />
